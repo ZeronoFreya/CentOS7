@@ -32,7 +32,7 @@ function userAdd() {
   # .ssh 目录的权限必须是 700
   chmod 700 $sshPwd
   cd $sshPwd || exit
-  read -rp 'Add Public key ? [y/n]' is_add_key
+  read -rp 'Add Public key (Copy&Paste)? [y/n]' is_add_key
   if [[ ${is_add_key} == "y" || ${is_add_key} == "Y" ]]; then
       read -rp 'Public key:' pub_key
       echo $pub_key >> authorized_keys
